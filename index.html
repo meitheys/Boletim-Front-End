@@ -1,32 +1,26 @@
 <!DOCTYPE html>
 <html lang="en" ng-app="myApp">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Início</title>
+    <title>Escola</title>
 
     <link rel="stylesheet" type="text/css" href="index.css">
     <link href="content/bootstrap-4.4.1-dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+
     <script src="content/angular.min.js"></script>
-
-    <!-- Instanciando .js do Angular -->
-
+    <script src="content/angular-1.7.9/angular-route.min.js"></script>
     <script src="app/scripts/app.js"></script>
 
 </head>
 
-<body> 
-
-    <div ng-controller="Controller">
-        <p>{{ message }}</p>
-        <ul>
-            <li ng-repeat="aluno in alunos">{{ aluno }}</li>
-        </ul>
-    </div>
-    
-
-
-
+<body>
+    <header ng-include="'header.html'"></header>
+    <main ng-view></main>
+                
 
 </body>
 </html>
