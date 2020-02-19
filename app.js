@@ -7,8 +7,7 @@ app.config(['$routeProvider', function($routeProvider){
         templateUrl: 'views/home.html'
     })
     .when('/list', {
-        templateUrl: 'views/listAlunos.html',
-        controller: 'Controller'
+        templateUrl: 'views/alunos.html',
     })
     .otherwise({
         redirectTo: '/home'

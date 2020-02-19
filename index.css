@@ -4,7 +4,7 @@ body{
     background: radial-gradient(circle, #ffffff 50%, #eeeeee 100%);
 }
 
-input{
+.txtPesquisa, .txtFormNome, .txtFormNomeResp{
     width: 90%;
     padding: 10px 5%;
     border-radius: 10px;
@@ -44,4 +44,87 @@ input{
 
 #menu-bar a{
     color: #fff;
+}
+
+.list{
+    border-top: 1px solid #e2e2e2;
+}
+
+.remove{
+    float: right;
+    padding: 5px;
+    background: #fff;
+    width: 18px;
+    text-align: center;
+    border-radius: 20px;
+    color: crimson;
+    cursor: pointer;
+    margin-left: 10px;
+    margin-top: -40px;
+}
+
+h1,h2,h3{
+    margin: 0;
+}
+
+.content{
+    padding: 20px;
+  }
+
+ul{
+    padding: 0;
+    list-style-type: none;
+    margin: 30px 0;
+}
+
+.content li{
+    padding: 15px 0;
+    border-top: 1px solid #e2e2e2;
+    color: #444;
+}
+
+.txtPesquisa{
+    margin-left: 5%;
+}
+
+.txtFormNome{
+    margin-left: 5%;
+    margin-top: 20px;
+}
+
+.container{
+    -webkit-box-shadow: 2px 2px 8px #999; 
+    -moz-box-shadow: 2px 2px 8px #999;
+        box-shadow: 2px 2px 8px #999;	
+}
+
+.containerList h2{
+    text-align: center;
+}
+
+.txtFormTel{
+    margin-left: 5%;
+    padding: 10px 5%;
+    border-radius: 10px;
+    border: 2px solid #ddd;
+    margin: 10px 0;
+    -webkit-box-shadow: 2px 0.5px 14px #999; 
+    -moz-box-shadow: 2px 0.5px 14px #999;
+        box-shadow: 2px 0.5px 14px #999;	
+
+    width: 60%;
+    margin-top: 20px;
+}
+
+.txtFormTurma{
+    padding: 10px 5%;
+    border-radius: 10px;
+    border: 2px solid #ddd;
+    margin: 10px 0;
+    -webkit-box-shadow: 2px 0.5px 14px #999; 
+    -moz-box-shadow: 2px 0.5px 14px #999;
+        box-shadow: 2px 0.5px 14px #999;	
+
+    margin-top: 20px;
+    width: 20%;
 }
