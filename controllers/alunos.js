@@ -2,7 +2,7 @@ app.controller('alunosController', function ($scope, $http) {
 
     $scope.alunosDTO = {nomeAluno: '', responsavel: '', telefone: '', turma: ''};
 
-    $scope.salvarEscola = function () {
+    $scope.salvarAluno = function () {
         console.log("Salvando Aluno")
         console.log($scope.alunosDTO);
         $http({ method: 'POST', url: 'http://localhost:8080/alunos', data: $scope.alunosDTO})

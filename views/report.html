@@ -1,6 +1,17 @@
-<div class="container">
+<div class="container" ng-controller="reportController">
     <div class="row">
         <div class="col-12">
+
+            <h1>Boletim</h1>
+            <form>
+            <input type="text" placeholder="Id Aluno" ng-model="boletim.aluno">
+            <select ng-model="boletim.format">
+                <option>html</option>
+                <option>pdf</option>
+            </select>
+            <button type="submit" ng-click="imprimir()">Gerar</button>
+            </form>
+
         </div>
     </div>
 </div>
