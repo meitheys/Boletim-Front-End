@@ -9,7 +9,7 @@
                 <ul>
                     <li class="list" ng-repeat="e in alunos | filter: search">
                         <h3>{{ e.id }} - {{ e.nomeAluno }} - {{ e.responsavel }} - {{ e.telefone }} - {{ e.turma.numeroTurma }}</h3>
-                        <input type="button" class="btn btn-danger remove">
+                        <input type="button" ng-click="excluirAluno(e.id)" class="btn btn-danger remove">
                     </li>
                 </ul>                                                                     
                 <hr>

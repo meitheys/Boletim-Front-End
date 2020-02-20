@@ -9,6 +9,7 @@ app.controller('alunosController', function ($scope, $http) {
             .then(function (response) {
                 console.log(response.data);
                 console.log(response.status);
+                $scope.toInit();
             }, function (response) {
                 console.log(response.data);
                 console.log(response.status);
@@ -16,7 +17,6 @@ app.controller('alunosController', function ($scope, $http) {
     };
 
     $scope.toInit = function () {
-
         $http({ method: 'GET', url: 'http://localhost:8080/alunos/findAlunos' })
             .then(function (response) {
                 $scope.alunos = response.data;
@@ -31,10 +31,17 @@ app.controller('alunosController', function ($scope, $http) {
     $scope.exibirAlunos = function (i) {
         $scope.alunos = { id: i.id, nomeAluno: i.nomeAluno, responsavel: i.responsavel, telefone: i.telefone, turma: i.turma }
     };
-
-    $scope.excluirAluno = function (){
-        $http({ method: 'DELETE', url: 'http://localhost:8080/alunos/'})
-
-
+    
+    $scope.excluirAluno = function (id){
+        $http({ method: 'DELETE', url: 'http://localhost:8080/alunos/' + id, data: id })
+        .then(function (response) {
+            $scope.alunos = response.data;
+            console.log(response.data);
+            console.log(response.status);
+            $scope.toInit();
+        }, function (response) {
+            console.log(response.data);
+            console.log(response.status);
+        });         
     };
 });

@@ -1,15 +1,26 @@
-<div class="container" ng-controller="turmaController">
+<div class="container" ng-controller="turmaController" ng-init="toInit()">
     <div class="row">
         <div class="col-12">
+            <br>
+            <h2>Lista de Turmas</h2>
+            <br>
 
-            <input type="text" placeholder="Informe o número da turma, ex: 2nc3" ng-model="turma.numeroTurma">
-            <select ng-model="turma.periodo">
+            <input type="text" class="txtPesquisa" placeholder="Pesquise por uma turma" ng-model="search" />
+            <ul>
+                <li class="list" ng-repeat="e in turma | filter: search">
+                    <h3>{{ e.id }} - {{ e.numeroTurma }} - {{ e.periodo }}</h3>
+                    <input type="button" ng-click="excluirT rma(e.id)" class="btn btn-danger remove">
+                </li>
+            </ul>                                                                                                        
+            <hr>
+
+            <input type="text" placeholder="Informe o número da turma, ex: 2nc3" ng-model="turmaDTO.numeroTurma">
+            <select ng-model="turmaDTO.periodo">
                 <option>Matutino</option>
                 <option>Vespertino</option>
                 <option>Noturno</option>
             </select>
             <button type="submit" ng-click="salvarTurma()">Salvar</button>
-
         </div>
     </div>
 </div>
