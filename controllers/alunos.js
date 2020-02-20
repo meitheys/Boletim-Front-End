@@ -16,7 +16,7 @@ app.controller('alunosController', function ($scope, $http) {
             });
     };
 
-    $scope.toInit = function () {
+    $scope.toInit = function (){
         $http({ method: 'GET', url: 'http://localhost:8080/alunos/findAlunos' })
             .then(function (response) {
                 $scope.alunos = response.data;

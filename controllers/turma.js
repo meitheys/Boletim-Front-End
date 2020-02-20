@@ -10,7 +10,7 @@ app.controller('turmaController', function ($scope, $http) {
             console.log(response.data);
             console.log(response.status);
             $scope.toInit();
-        }, function (response) {
+        }, function (response){
             console.log(response.data);
             console.log(response.status);
         });

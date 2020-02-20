@@ -10,7 +10,7 @@ app.config(['$routeProvider', function($routeProvider){
         templateUrl: 'views/alunos.html'
     })
     .when('/report', {
-        templateUrl: 'views/report.html'
+        templateUrl:  'views/report.html'
     })
     .when('/turma', {
         templateUrl: 'views/turma.html'

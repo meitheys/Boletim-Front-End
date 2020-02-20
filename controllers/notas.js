@@ -18,7 +18,7 @@ app.controller('notasController', function ($scope, $http) {
 
     $scope.disciplinaDTO = { id: '', disciplina: '' };
 
-    $scope.toInit = function () {
+    $scope.toInit = function (){
         $http({ method: 'GET', url: 'http://localhost:8080/disciplinas/findDisciplinas' })
             .then(function (response) {
                 $scope.disciplina = response.data;

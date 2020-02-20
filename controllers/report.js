@@ -6,7 +6,7 @@ app.controller('reportController', function ($scope, $http) {
         console.log("Imprimindo boletim")
         console.log($scope.boletim);
         $http({ method: 'GET', url: 'http://localhost:8080/jrxml/report/' + $scope.boletim.format + '/' + $scope.boletim.aluno})
-        .then(function (response) {
+        .then(function (response){
             console.log(response.status);
         }, function (response) {
             console.log('200');
