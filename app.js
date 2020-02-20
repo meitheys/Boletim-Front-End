@@ -12,6 +12,9 @@ app.config(['$routeProvider', function($routeProvider){
     .when('/report', {
         templateUrl: 'views/report.html'
     })
+    .when('/turma', {
+        templateUrl: 'views/turma.html'
+    })
     .otherwise({
         redirectTo: '/home'
     })

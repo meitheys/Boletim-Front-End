@@ -1,0 +1,15 @@
+<div class="container" ng-controller="turmaController">
+    <div class="row">
+        <div class="col-12">
+
+            <input type="text" placeholder="Informe o número da turma, ex: 2nc3" ng-model="turma.numeroTurma">
+            <select ng-model="turma.periodo">
+                <option>Matutino</option>
+                <option>Vespertino</option>
+                <option>Noturno</option>
+            </select>
+            <button type="submit" ng-click="salvarTurma()">Salvar</button>
+
+        </div>
+    </div>
+</div>

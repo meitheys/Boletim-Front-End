@@ -1,17 +1,17 @@
-<div class="container containerList" ng-controller="alunosController">
+<div class="container containerList" ng-controller="alunosController" ng-init="toInit()">
     <div class="content">
         <div class="row">
             <div class="col-12">
                 <br>
                 <h2>Lista de Aluno</h2>
                 <br>
-                <!-- <input type="text" class="txtPesquisa" placeholder="Pesquise por um aluno" ng-model="search" />
+                <input type="text" class="txtPesquisa" placeholder="Pesquise por um aluno" ng-model="search" />
                 <ul>
-                    <li class="list" ng-repeat=" | filter: search">
-                        <h3>{{  }} - {{  }}</h3>
-                        <input type="button" class="btn btn-danger remove" ng-click="removeNinja(ninja)">
+                    <li class="list" ng-repeat="e in alunos | filter: search">
+                        <h3>{{ e.id }} - {{ e.nomeAluno }} - {{ e.responsavel }} - {{ e.telefone }} - {{ e.turma.numeroTurma }}</h3>
+                        <input type="button" class="btn btn-danger remove">
                     </li>
-                </ul> -->
+                </ul>                                                                     
                 <hr>
                 <h2>Cadastro de Alunos</h2>
                 <form>
