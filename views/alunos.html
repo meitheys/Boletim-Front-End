@@ -7,9 +7,9 @@
                 <br>
                 <input type="text" class="txtPesquisa" placeholder="Pesquise por um aluno" ng-model="search" />
 
-                <table class="table-striped tabelaAluno">
+                <table class="table table-hover table-dark tabelaAluno">
                     <tr>
-                        <th>Id</th>
+                        <th class="th">Id</th>
                         <th>Aluno</th>
                         <th>Responsavel</th>
                         <th>Telefone</th>
@@ -17,12 +17,12 @@
                         <th>Excluir</th>
                     </tr>
                 <tbody ng-repeat="e in alunos | filter: search">
-                    <td>{{ e.id }}</td>
+                    <td class="td">{{ e.id }}</td>
                     <td>{{ e.nomeAluno }}</td>
                     <td>{{ e.responsavel }}</td>
                     <td>{{ e.telefone }}</td>
                     <td>{{ e.turma.numeroTurma }}</td>
-                    <td><button ng-click="excluirAluno(e.id)" class="btn btn-danger remove"></button></td>
+                    <td><button ng-click="excluirAluno(e.id)" class="botaoTabela abtn btn-danger remove"></button></td>
                 </tbody>
             </table>
                                                                         
