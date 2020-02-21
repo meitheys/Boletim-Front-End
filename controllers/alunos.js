@@ -9,10 +9,13 @@ app.controller('alunosController', function ($scope, $http) {
             .then(function (response) {
                 console.log(response.data);
                 console.log(response.status);
+                window.alert(status)
                 $scope.toInit();
             }, function (response) {
                 console.log(response.data);
                 console.log(response.status);
+                window.alert("STATUS: " + response.status + "( " + response.data.error + " )" + "\n"
+                + "ERROR: " + response.data.message)
             });
     };
 
@@ -24,6 +27,8 @@ app.controller('alunosController', function ($scope, $http) {
                 console.log(response.status);
             }, function (response) {
                 console.log(response.data);
+                console.log(response.data.message);
+                console.log(response.data.error);
                 console.log(response.status);
             });                              
     };
