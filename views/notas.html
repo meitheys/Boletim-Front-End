@@ -1,22 +1,25 @@
 <div class="container" ng-controller="notasController" ng-init="toInit()">
     <div class="row">
         <div class="col-12">
-            <h1>Notas</h1>
+            <br>
+            <h1 class="tituloNotas">Notas</h1>
             
-            <input type="text" placeholder="Informe o aluno" ng-model="notasDTO.aluno">
-            <input type="number" placeholder="Informe a primeira nota"ng-model="notasDTO.primeiraNota">
-            <input type="number" placeholder="Informe a segunda nota" ng-model="notasDTO.segundaNota" >
-            <input type="number" placeholder="Média" value="{{ ((notasDTO.primeiraNota/1) + (notasDTO.segundaNota/1)) / 2  }}" ng-model="notasDTO.media">
-            <select ng-model="notasDTO.semestre">
+            <input type="text" class="alunoNotas" placeholder="Informe o aluno" ng-model="notasDTO.aluno">
+            <input type="number" class="notaUm" placeholder="Informe a primeira nota"ng-model="notasDTO.primeiraNota">
+            <input type="number" class="notaDois" placeholder="Informe a segunda nota" ng-model="notasDTO.segundaNota" >
+            <input type="number" class="media" placeholder="Média" value="{{ ((notasDTO.primeiraNota/1) + (notasDTO.segundaNota/1)) / 2  }}" ng-model="notasDTO.media">
+            <select class="escolhaSemestre" ng-model="notasDTO.semestre">
                 <option>Informe o Semestre</option>
                 <option>1</option>
                 <option>2</option>
             </select>
-            <select ng-model="notasDTO.disciplina">
+            <br>
+            <select class="escolhaDisciplina" ng-model="notasDTO.disciplina">
                 <option>Selecione a Disciplina</option>
                 <option ng-repeat="e in disciplina">{{ e.id }}</option>
             </select>
-            <button ng-click="salvarNotas()"></button>
+            <br>
+            <input type="submit" class="btn btn-success enviaNotas" ng-click="salvarNotas()">
         </div>
     </div>
 </div>

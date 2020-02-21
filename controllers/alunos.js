@@ -9,7 +9,7 @@ app.controller('alunosController', function ($scope, $http) {
             .then(function (response) {
                 console.log(response.data);
                 console.log(response.status);
-                window.alert(status)
+                window.alert("STATUS: " + response.status)
                 $scope.toInit();
             }, function (response) {
                 console.log(response.data);
@@ -26,6 +26,8 @@ app.controller('alunosController', function ($scope, $http) {
                 console.log(response.data);
                 console.log(response.status);
             }, function (response) {
+                window.alert("Impossivel executar 'GET', STATUS: " + response.status + "( " + response.data.error + " )" + "\n"
+                + "ERROR: " + response.data.message)
                 console.log(response.data);
                 console.log(response.data.message);
                 console.log(response.data.error);
@@ -43,8 +45,11 @@ app.controller('alunosController', function ($scope, $http) {
             $scope.alunos = response.data;
             console.log(response.data);
             console.log(response.status);
+            window.alert("Executado Delete, STATUS: " + response.status)
             $scope.toInit();
         }, function (response) {
+            window.alert("Impossivel executar 'GET', STATUS: " + response.status + "( " + response.data.error + " )" + "\n"
+            + "ERROR: " + response.data.message)
             console.log(response.data);
             console.log(response.status);
         });         

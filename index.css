@@ -217,3 +217,74 @@ ul{
 .th{
     font-size: 25px;
 }
+
+.alunoNotas{
+    width: 90%;
+    padding: 10px 5%;
+    border-radius: 10px;
+    border: 2px solid #ddd;
+    margin: 10px 0;
+    -webkit-box-shadow: 2px 0.5px 14px #999; 
+    -moz-box-shadow: 2px 0.5px 14px #999;
+        box-shadow: 2px 0.5px 14px #999;	
+}
+
+.media{
+    width: 15%;
+    padding: 10px 5%;
+    border-radius: 10px;
+    border: 2px solid #ddd;
+    margin: 10px 0;
+    -webkit-box-shadow: 2px 0.5px 14px #999; 
+    -moz-box-shadow: 2px 0.5px 14px #999;
+        box-shadow: 2px 0.5px 14px #999;	
+}
+
+.media{
+    margin-left: 5%;
+}
+
+
+.alunoNotas{
+    margin-left: 5%;
+}
+
+.notaUm, .notaDois{
+    width: 30%;
+    padding: 10px 5%;
+    border-radius: 10px;
+    border: 2px solid #ddd;
+    margin: 10px 0;
+    -webkit-box-shadow: 2px 0.5px 14px #999; 
+    -moz-box-shadow: 2px 0.5px 14px #999;
+        box-shadow: 2px 0.5px 14px #999;
+}
+
+.notaUm, .notaDois{
+    margin-left: 5%;
+}
+
+.escolhaDisciplina, .escolhaSemestre{
+    width: 40%;
+    margin-top: 10px;
+    padding-top: 15px;
+    border-radius: 10px;
+    -webkit-box-shadow: 2px 0.5px 14px #999; 
+    -moz-box-shadow: 2px 0.5px 14px #999;
+        box-shadow: 2px 0.5px 14px #999;
+}
+
+.escolhaDisciplina, .escolhaSemestre{
+    margin-left: 5%;
+}
+
+.enviaNotas{
+    margin-top: 40px;
+    margin-bottom: 20px;
+    width: 10%;
+    margin-left: 45%;
+}
+
+.tituloNotas{
+    text-align: center;
+}
