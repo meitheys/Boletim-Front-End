@@ -18,6 +18,9 @@ app.config(['$routeProvider', function($routeProvider){
     .when('/notas', {
         templateUrl: 'views/notas.html'
     })
+    .when('/disciplinas', {
+        templateUrl: 'views/disciplinas.html'
+    })
     .otherwise({
         redirectTo: '/home'
     })

@@ -11,6 +11,8 @@ app.controller('notasController', function ($scope, $http) {
                 console.log(response.status);
                 $scope.toInit();
             }, function (response) {
+                window.alert("Impossivel executar 'POST', STATUS: " + response.status + "( " + response.data.error + " )" + "\n"
+                + "ERROR: " + response.data.message)
                 console.log(response.data);
                 console.log(response.status);
             });
@@ -25,6 +27,8 @@ app.controller('notasController', function ($scope, $http) {
                 console.log(response.data);
                 console.log(response.status);
             }, function (response) {
+                window.alert("Impossivel executar 'GET', STATUS: " + response.status + "( " + response.data.error + " )" + "\n"
+                + "ERROR: " + response.data.message)
                 console.log(response.data);
                 console.log(response.status);
             });     

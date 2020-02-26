@@ -8,8 +8,8 @@ app.controller('reportController', function ($scope, $http) {
         $http({ method: 'GET', url: 'http://localhost:8080/jrxml/report/' + $scope.boletim.format + '/' + $scope.boletim.aluno})
         .then(function (response){
             console.log(response.status);
-        }, function (response) {
             console.log('200');
+        }, function (response) {   
         });
     };
 });

@@ -1,0 +1,37 @@
+<div class="container" ng-controller="disciplinasController" ng-init="toInit()">
+    <div class="content">
+        <div class="row">
+            <div class="col-12">
+                <br>
+                <h2 style="text-align: center;">Lista de Disciplinas</h2>
+                <br>
+
+                <input type="text" class="txtPesquisa" placeholder="Pesquise por uma Disciplina" ng-model="search" />
+
+                <table class="table table-hover table-dark tabelaAluno">
+                    <tr>
+                        <th class="th">Id</th>
+                        <th>Disciplina</th>
+                        <th>Excluir</th>
+                    </tr>
+                    <tbody ng-repeat="e in disciplinas | filter: search">
+                        <td class="td">{{ e.id }}</td>
+                        <td>{{ e.disciplinas }}</td>
+                        <td><button ng-click="excluirDisciplinas(e.id)" class="botaoTabela btn btn-danger remove"></button>
+                        </td>
+                    </tbody>
+                </table>
+                
+                <hr>
+                <br>
+
+                <form>
+                <input type="text" class="alunoNotas" ng-model="disciplinasDTO.disciplinas" placeholder="Informe a Disciplina">
+                <br>
+                <input type="submit" class="submitAluno btn btn-success" ng-click="salvarDisciplina()">
+                </form>
+
+            </div>
+        </div>
+    </div>
+</div>

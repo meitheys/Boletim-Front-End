@@ -1,11 +1,11 @@
-app.controller('alunosController', function ($scope, $http) {
+app.controller('disciplinasController', function ($scope, $http) {
 
-    $scope.alunosDTO = { nomeAluno: '', responsavel: '', telefone: '', turma: '' };
+    $scope.disciplinasDTO = { disciplinas: '' };
 
-    $scope.salvarAluno = function () {
-        console.log("Salvando Aluno")
-        console.log($scope.alunosDTO);
-        $http({ method: 'POST', url: 'http://localhost:8080/alunos', data: $scope.alunosDTO })
+    $scope.salvarDisciplina = function () {
+        console.log("Salvando Disciplina")
+        console.log($scope.disciplinasDTO);
+        $http({ method: 'POST', url: 'http://localhost:8080/disciplinas', data: $scope.disciplinasDTO })
             .then(function (response) {
                 console.log(response.data);
                 console.log(response.status);
@@ -14,15 +14,15 @@ app.controller('alunosController', function ($scope, $http) {
             }, function (response) {
                 console.log(response.data);
                 console.log(response.status);
-                window.alert("STATUS: " + response.status + "( " + response.data.error + " )" + "\n"
+                window.alert("Impossivel executar 'POST', STATUS: " + response.status + "( " + response.data.error + " )" + "\n"
                 + "ERROR: " + response.data.message)
             });
     };
- 
+
     $scope.toInit = function (){
-        $http({ method: 'GET', url: 'http://localhost:8080/alunos/findAlunos' })
+        $http({ method: 'GET', url: 'http://localhost:8080/disciplinas/findDisciplinas' })
             .then(function (response) {
-                $scope.alunos = response.data;
+                $scope.disciplinas = response.data;
                 console.log(response.data);
                 console.log(response.status);
             }, function (response) {
@@ -35,14 +35,14 @@ app.controller('alunosController', function ($scope, $http) {
             });                              
     };
 
-    $scope.exibirAlunos = function (i) {
-        $scope.alunos = { id: i.id, nomeAluno: i.nomeAluno, responsavel: i.responsavel, telefone: i.telefone, turma: i.turma }
+    $scope.exibirDisciplinas = function (i) {
+        $scope.disciplinas = { id: '', disciplinas: '' }
     };
-    
-    $scope.excluirAluno = function (id){
-        $http({ method: 'DELETE', url: 'http://localhost:8080/alunos/' + id, data: id })
+
+    $scope.excluirDisciplinas = function (id){
+        $http({ method: 'DELETE', url: 'http://localhost:8080/disciplinas/' + id, data: id })
         .then(function (response) {
-            $scope.alunos = response.data;
+            $scope.disciplinas = response.data;
             console.log(response.data);
             console.log(response.status);
             window.alert("Executado Delete, STATUS: " + response.status)
@@ -54,4 +54,8 @@ app.controller('alunosController', function ($scope, $http) {
             console.log(response.status);
         });         
     };
+
+
+
+
 });

@@ -4,9 +4,7 @@
             <br>
             <h2 class="tituloTurmas" style="text-align: center;">Lista de Turmas</h2>
             <br>
-
             <input type="text" class="txtPesquisa" placeholder="Pesquise por uma turma" ng-model="search" />
-
             <table class="table table-hover table-dark tabelaAluno">
                 <tr>
                     <th class="th">Id</th>
@@ -21,16 +19,16 @@
                     <td><button ng-click="excluirTurma(e.id)" class="botaoTabela btn btn-danger remove"></button></td>
                 </tbody>
             </table>
-
             <hr>
-
             <input type="text" class="textTurma" placeholder="Informe o número da turma, ex: 2nc3" ng-model="turmaDTO.numeroTurma">
-            <select ng-model="turmaDTO.periodo">
+            <br>
+            <select class="selectPeriodo" ng-model="turmaDTO.periodo">
                 <option>Matutino</option>
                 <option>Vespertino</option>
                 <option>Noturno</option>
             </select>
-            <button type="submit" ng-click="salvarTurma()">Salvar</button>
+            <br>
+            <button type="submit" style="margin-bottom: 20px;" class="btn btn-success buttonTurma" ng-click="salvarTurma()">Salvar</button>
         </div>
     </div>
 </div>

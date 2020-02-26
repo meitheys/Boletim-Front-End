@@ -2,14 +2,16 @@
     <div class="row">
         <div class="col-12">
 
-            <h1>Boletim</h1>
+            <h1 style="text-align: center; padding-top: 20px;">Boletim</h1>
             <form>
-            <input type="text" placeholder="Id Aluno" ng-model="boletim.aluno">
-            <select ng-model="boletim.format">
+            <input type="text" class="textIdAlunoReport" placeholder="Id Aluno" ng-model="boletim.aluno">
+            <Br>
+            <select ng-model="boletim.format" class="selectFormat">
                 <option>html</option>
                 <option>pdf</option>
             </select>
-            <button type="submit" ng-click="imprimir()">Gerar</button>
+            <br>
+            <button type="submit" class="btn btn-success enviarReport" ng-click="imprimir()">Gerar</button>
             </form>
 
         </div>
