@@ -9,7 +9,10 @@ app.controller('reportController', function ($scope, $http) {
         .then(function (response){
             console.log(response.status);
             console.log('200');
+            window.alert("STATUS: " + response.status)
         }, function (response) {   
+            window.alert("Impossivel executar 'GET', STATUS: " + response.status + "( " + response.data.error + " )" + "\n"
+            + "ERROR: " + response.data.message)
         });
     };
 });

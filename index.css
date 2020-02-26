@@ -99,6 +99,11 @@ ul{
     -webkit-box-shadow: 2px 2px 8px #999; 
     -moz-box-shadow: 2px 2px 8px #999;
         box-shadow: 2px 2px 8px #999;	
+        transition: 0.8s;
+}
+
+.container:hover{
+    -webkit-transform: scale(1.0084);
 }
 
 .containerList h2{
@@ -342,8 +347,13 @@ ul{
 }
 
 .imgHeader{
+    transition: 0.8s;
     margin-bottom: 14px;
     max-width: 70px;
+}
+
+.imgHeader:hover{
+    -webkit-transform: scale(1.10);
 }
 
 .txtEscola{
@@ -383,4 +393,14 @@ ul{
 .buttonTurma{
     margin-top: 30px;
     margin-left: 47%;
+}
+
+td{
+    transition: 0.387s;
+    opacity: 0.769;
+}
+
+td:hover{
+    -webkit-transform: scale(1.20);
+    opacity: 1;
 }

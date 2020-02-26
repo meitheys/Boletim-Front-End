@@ -9,6 +9,7 @@ app.controller('notasController', function ($scope, $http) {
             .then(function (response) {
                 console.log(response.data);
                 console.log(response.status);
+                window.alert("SUCCESS! STATUS: " + response.status)
                 $scope.toInit();
             }, function (response) {
                 window.alert("Impossivel executar 'POST', STATUS: " + response.status + "( " + response.data.error + " )" + "\n"
